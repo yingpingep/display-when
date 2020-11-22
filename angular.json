@@ -5,5 +5,45 @@
     "packageManager": "yarn"
   },
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "displayWhen": {
+      "projectType": "library",
+      "root": "projects/display-when",
+      "sourceRoot": "projects/display-when/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/display-when/tsconfig.lib.json",
+            "project": "projects/display-when/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/display-when/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/display-when/src/test.ts",
+            "tsConfig": "projects/display-when/tsconfig.spec.json",
+            "karmaConfig": "projects/display-when/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/display-when/tsconfig.lib.json",
+              "projects/display-when/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "displayWhen"
 }
