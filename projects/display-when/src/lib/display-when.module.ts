@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
+import { EDisplayWhen } from './display-when.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [EDisplayWhen],
   imports: [],
-  exports: [],
+  exports: [EDisplayWhen],
 })
 export class DisplayWhenModule {}
