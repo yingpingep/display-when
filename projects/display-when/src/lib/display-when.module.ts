@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { DisplayWhenComponent } from './display-when.component';
 
 @NgModule({
-  declarations: [DisplayWhenComponent],
+  declarations: [],
   imports: [],
-  exports: [DisplayWhenComponent],
+  exports: [],
 })
 export class DisplayWhenModule {}
